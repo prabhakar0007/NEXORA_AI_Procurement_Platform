@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEXORA AI — Procurement Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-mark">N</div><div><b>NEXORA</b><small>PROCUREMENT INTELLIGENCE</small></div></div>
+  <div class="workspace-label">WORKSPACE</div>
+  <nav>
+    <button class="nav-item active" data-view="overview"><span>▦</span> Overview</button>
+    <button class="nav-item" data-view="suppliers"><span>◈</span> Suppliers <em id="supplierNavCount">04</em></button>
+    <button class="nav-item" data-view="rfq"><span>⌑</span> RFQ & sourcing</button>
+    <button class="nav-item" data-view="optimizer"><span>✳</span> Smart optimizer</button>
+    <button class="nav-item" data-view="logistics"><span>⌁</span> Logistics</button>
+    <button class="nav-item" data-view="intelligence"><span>◉</span> AI intelligence</button>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="profile"><div class="avatar">NX</div><div><b>Workspace Admin</b><small>Procurement team</small></div><span class="more">•••</span></div>
+  </div>
+</aside>
+<main class="main">
+<header class="topbar"><button class="mobile-menu" id="menuBtn">☰</button><div class="crumb">Workspace <span>/</span> <b id="pageCrumb">Overview</b></div><div class="top-actions"><span class="live-dot"></span><span class="top-live">System operational</span><button class="icon-btn" title="Notifications">♧</button><div class="avatar small">NX</div></div></header>
+<section class="content">
+<div class="page-heading"><div><div class="eyebrow"><span id="headerDate">FRIDAY, 30 OCTOBER 2026</span> <span class="tiny-dot"></span> PROCUREMENT OVERVIEW</div><h1 id="pageTitle">Good afternoon, team <span class="wave">✳</span></h1><p id="pageSubtitle">Here's what's happening across your procurement operations.</p></div><button class="primary-btn" id="newRfqBtn">＋ Create new RFQ</button></div>
+<div class="connection-strip"><div><span class="status-chip live">● LIVE AI</span> Gemini intelligence <small id="geminiState">Checking API</small></div><div><span class="status-chip maps">● MAPS</span> Google Maps <small id="mapsState">Checking API</small></div><div><span class="status-chip demo">● DEMO</span> Logistics & ERP simulation</div></div>
+<div class="view" id="view-overview">
+  <div class="metrics">
+    <article class="metric-card"><div class="metric-top"><span>Total suppliers</span><span class="metric-icon violet">◈</span></div><strong id="metricSuppliers">04</strong><small><i>↗</i> Registered in workspace</small></article>
+    <article class="metric-card"><div class="metric-top"><span>Active RFQs</span><span class="metric-icon blue">⌑</span></div><strong id="metricRfqs">03</strong><small>Across sourcing pipeline</small></article>
+    <article class="metric-card"><div class="metric-top"><span>Potential savings</span><span class="metric-icon green">↗</span></div><strong id="metricSavings">₹ 42,800</strong><small>Illustrative from current sample quotes</small></article>
+    <article class="metric-card"><div class="metric-top"><span>Avg. lead time</span><span class="metric-icon amber">◷</span></div><strong id="metricLead">10.3 <small>days</small></strong><small>Based on supplier records</small></article>
+  </div>
+  <div class="dashboard-grid">
+    <article class="panel wide"><div class="panel-head"><div><h3>Procurement performance</h3><p>Supplier quote comparison · current workspace data</p></div><span class="select-pill">Last 30 days⌄</span></div><div class="chart-area"><div class="chart-y"><span>₹5L</span><span>₹4L</span><span>₹3L</span><span>₹2L</span><span>₹1L</span></div><div class="chart" id="performanceChart"><div class="chart-grid"></div><svg viewBox="0 0 700 210" preserveAspectRatio="none"><defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#7c6cf2" stop-opacity=".25"/><stop offset="1" stop-color="#7c6cf2" stop-opacity="0"/></linearGradient></defs><path d="M0 150 C70 135 80 95 145 110 S240 155 290 90 S390 100 440 65 S540 105 590 45 S650 55 700 20 L700 210 L0 210Z" fill="url(#area)"/><path d="M0 150 C70 135 80 95 145 110 S240 155 290 90 S390 100 440 65 S540 105 590 45 S650 55 700 20" fill="none" stroke="#8173f4" stroke-width="3" vector-effect="non-scaling-stroke"/></svg><div class="chart-x"><span>01 Oct</span><span>06 Oct</span><span>12 Oct</span><span>18 Oct</span><span>24 Oct</span><span>30 Oct</span></div></div></div></article>
+    <article class="panel"><div class="panel-head"><div><h3>Supplier scorecard</h3><p>Quality × reliability index</p></div><button class="text-btn" data-goto="suppliers">View all ↗</button></div><div id="topSuppliers" class="rank-list"></div></article>
+    <article class="panel"><div class="panel-head"><div><h3>Recent activity</h3><p>Latest workspace updates</p></div><span class="muted-label">JUST NOW</span></div><div class="activity-list"><div class="activity"><span class="activity-icon purple">✳</span><div><b>AI optimizer ready</b><small>Supplier allocation engine available</small></div><time>Now</time></div><div class="activity"><span class="activity-icon green">＋</span><div><b>Supplier workspace initialized</b><small>Sample supplier records loaded</small></div><time>Today</time></div><div class="activity"><span class="activity-icon blue">⌁</span><div><b>Logistics module connected</b><small>Demo carrier adapter enabled</small></div><time>Today</time></div></div></article>
+  </div>
+</div>
+<div class="view hidden" id="view-suppliers">
+ <div class="section-toolbar"><div><h2>Supplier directory</h2><p>Manage supplier records and evaluate sourcing options.</p></div><button class="primary-btn" id="addSupplierBtn">＋ Add supplier</button></div>
+ <div class="panel table-panel"><div class="table-tools"><input id="supplierSearch" placeholder="⌕  Search suppliers…"><span class="muted-label">WORKSPACE RECORDS</span></div><div class="table-wrap"><table><thead><tr><th>SUPPLIER</th><th>LOCATION</th><th>UNIT PRICE</th><th>QUALITY</th><th>RELIABILITY</th><th>LEAD TIME</th><th></th></tr></thead><tbody id="supplierRows"></tbody></table></div></div>
+</div>
+<div class="view hidden" id="view-rfq">
+ <div class="section-toolbar"><div><h2>RFQ & sourcing</h2><p>Create purchase requirements and invite suppliers to quote.</p></div><button class="primary-btn" id="rfqCreate2">＋ New requirement</button></div><div class="rfq-grid" id="rfqList"></div>
+</div>
+<div class="view hidden" id="view-optimizer">
+ <div class="section-toolbar"><div><h2>Smart procurement optimizer</h2><p>Find a cost-efficient supplier mix under your delivery and budget constraints.</p></div><span class="status-chip live">● OPTIMIZATION ENGINE</span></div>
+ <div class="optimizer-layout"><div class="panel form-panel"><h3>Purchase requirement</h3><label>Product / component<input id="optProduct" value="Electronic component"></label><div class="two-fields"><label>Required quantity<input id="optQty" type="number" value="10000" min="1"></label><label>Maximum budget (₹)<input id="optBudget" type="number" value="500000" min="1"></label></div><label>Maximum delivery window (days)<input id="optDays" type="number" value="15" min="1"></label><button class="primary-btn full" id="runOptimizer">✳ Optimize supplier allocation</button><p class="helper">Calculations use saved supplier quotes and constraints. Results are recommendations, not purchase orders.</p></div><div class="panel result-panel" id="optimizerResult"><div class="empty-state"><div class="empty-orb">✳</div><h3>Ready to optimize</h3><p>Enter your requirement and run the allocation engine to see the best feasible supplier mix.</p></div></div></div>
+</div>
+<div class="view hidden" id="view-logistics">
+ <div class="section-toolbar"><div><h2>Logistics intelligence</h2><p>Explore supplier locations and indicative route distances.</p></div><span class="status-chip demo">● DEMO CARRIER STATUS</span></div>
+ <div class="logistics-layout"><div class="panel map-panel"><div class="panel-head"><div><h3>Supplier locations</h3><p>Map route estimates · Google Maps if configured</p></div><span class="status-chip maps">MAPS</span></div><div id="map" class="map"></div><div class="map-foot">Route and distance estimates are indicative. No carrier booking is created.</div></div><div class="panel logistics-side"><h3>Shipment simulator</h3><p>Sample shipment lifecycle for workflow testing.</p><div id="shipmentList"></div></div></div>
+</div>
+<div class="view hidden" id="view-intelligence">
+ <div class="section-toolbar"><div><h2>AI intelligence</h2><p>Ask NEXORA to analyze your procurement workspace.</p></div><span class="status-chip live">● GEMINI LIVE</span></div>
+ <div class="ai-layout"><div class="panel ai-chat"><div class="chat-intro"><div class="ai-orb">✳</div><div><h3>Procurement copilot</h3><p>Grounded in the supplier and RFQ records in this workspace.</p></div><button class="text-btn" id="clearChatBtn" style="margin-left:auto;font-size:10px" title="Clear chat history">Clear history</button></div><div id="chatMessages" class="chat-messages"><div class="chat-bubble assistant">Hello! I’m NEXORA. I can compare supplier options, explain trade-offs, identify missing information and help plan sourcing decisions. What would you like to analyze?</div></div><div class="prompt-chips"><button data-prompt="Compare all suppliers and recommend the best option for a 10,000 unit purchase. Explain the trade-offs.">Compare suppliers</button><button data-prompt="Identify procurement risks and what information is missing from this workspace.">Find risks</button><button data-prompt="Suggest a negotiation strategy for the lowest total-cost supplier.">Negotiation plan</button></div><form id="aiForm" class="chat-input"><input id="aiPrompt" placeholder="Ask about suppliers, costs, delivery risks…" autocomplete="off"><button class="send-btn">↑</button></form><div class="chat-note">AI-generated recommendations should be reviewed before business decisions.</div></div><div class="panel ai-side"><h3>Workspace context</h3><div class="context-stat"><span>Suppliers</span><b id="ctxSuppliers">—</b></div><div class="context-stat"><span>RFQs</span><b id="ctxRfqs">—</b></div><div class="context-stat"><span>AI provider</span><b>Gemini <i class="live-text">LIVE</i></b></div><div class="context-stat"><span>Optimization</span><b>Local engine</b></div><div class="notice-box">NEXORA sends current workspace records to Gemini when you ask a question. Avoid entering confidential information unless your data handling requirements permit it.</div></div></div>
+</div>
+</section>
+<footer>© 2026 NEXORA AI <span>Procurement intelligence, made actionable.</span><span class="footer-right">Built for smarter decisions</span></footer>
+</main>
+</div>
+<div class="modal-backdrop hidden" id="modal"><div class="modal"><div class="modal-head"><div><h3 id="modalTitle">Add supplier</h3><p id="modalDesc">Add a supplier to your workspace directory.</p></div><button class="close-btn" id="closeModal">×</button></div><form id="modalForm"><div id="modalFields" class="modal-fields"></div><div class="modal-actions"><button type="button" class="secondary-btn" id="cancelModal">Cancel</button><button class="primary-btn">Save record</button></div></form></div></div>
+<div class="toast" id="toast"></div>
+<script src="./app.js"></script>
+</body></html>
