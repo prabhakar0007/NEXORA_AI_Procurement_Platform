@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 nexora.db
 .DS_Store
+cloudflared.exe
