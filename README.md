@@ -5,7 +5,6 @@
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/prabhakar0007/NEXORA_AI_Procurement_Platform)
 
 > **🚀 Live Public URL:** [https://roses-sue-cohen-status.trycloudflare.com](https://roses-sue-cohen-status.trycloudflare.com)  
-> *(Direct link — no password or IP required)*
 
 ---
 
