@@ -1,5 +1,7 @@
 # NEXORA AI — Procurement Intelligence
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/prabhakar0007/NEXORA_AI_Procurement_Platform)
+
 A polished procurement workspace with:
 - Gemini API integration through a secure FastAPI backend
 - Google Maps JavaScript API integration (map key configured in frontend environment)
